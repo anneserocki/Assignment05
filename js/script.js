@@ -33,11 +33,11 @@ function saveEmployee() {
         };
 
         console.log('Saved successfully.')
-        console.log(digitId);
-        console.log(empName);
-        console.log(digitExt);
-        console.log(empEmail);
-        console.log(empDept);
+        console.log("ID: " + digitId);
+        console.log("Name: " + empName);
+        console.log("Extension: " + digitExt);
+        console.log("Email: " + empEmail);
+        console.log("Department: " + empDept);
     } else {        
         console.log('Canceled.'); 
         digitId = "";
