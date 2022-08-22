@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1 {margin-bottom: 30px;}
+        label {font-weight: bold;}
+        input, select {margin-bottom: 10px;}
+        form {width: 30%; padding: 20px;}
+    </style>
+</head>
+<body class="mt-2 ml-4">
+    <h1>Employee Management System</h1>
+    <form id="empForm">
+     <label>8-digit Employee ID</label><br>
+     <input type ="text" placeholder="14525789"><br>
+
+     <label>Full Name</label><br>
+     <input type ="text" placeholder="Zak"><br>
+
+     <label>4-digit Extension</label><br>
+     <input type ="text" placeholder="1234"><br>
+
+     <label>Email</label><br>
+     <input type ="email" placeholder="adb@gmail.com"><br>
+
+     <label>Department</label><br>
+     <select name="Department Name" id="dept">
+        <option value =" ">--Please choose an option--</option>
+        <option value="Administrative">Administrative</option>
+        <option value ="Engineering">Engineering</option>
+        <option value ="IT">IT</option>
+        <option value ="Finance">Finance</option>
+     </select><br>    
+
+     <button type="submit">Add Employee</button><br>
+    </form>
+</body>
+</html>
