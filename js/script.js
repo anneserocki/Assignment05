@@ -1,3 +1,7 @@
+// My questions: 
+// why doesn't console.log() show the result after I enter correct email? 
+// But if I don't enter email, console.log() can show other fields' result?
+
 
 // Variables
 let employeeForm = document.getElementById("empForm");
