@@ -1,37 +1,49 @@
-// Preventing the Browser's Default Behavior
-document.preventDefault;
 
 // Variables
 let employeeForm = document.getElementById("empForm");
-let digitId = document.getElementById("id");
-let empName = document.getElementById("name");
-let digitExt = document.getElementById("ext");
-let empEmail = document.getElementById("email");
-let empDept = document.getElementById("department"); 
 let btn = document.getElementById("submit");
 
 // Functions
 function helper() {
-    digitId ="";
-    empName ='';
-    digitExt ="";
-    empEmail ="";
-    empDept ="";
+    // Preventing the Browser's Default Behavior
+    document.preventDefault;  
 };
 
 function saveEmployee() {
+
     if (window.confirm('Are you sure to submit?')) {
+        var digitId = document.getElementById("id").value;
+        var empName = document.getElementById("name").value;
+        var digitExt = document.getElementById("ext").value;
+        var empEmail = document.getElementById("email").value.indexOf("@");
+        var empDept = document.getElementById("department").value;
+        
+        let submitOk = "true";
+        if (empEmail == "-1"){
+            alert("Not a valid email!");
+            submitOk == "false";
+        };
+        
+        if (submitOk == "false"){
+            return false;
+        };
+
         console.log('Saved successfully.')
         console.log(digitId);
         console.log(empName);
         console.log(digitExt);
         console.log(empEmail);
         console.log(empDept);
-    } else {
-        console.log('Canceled.');
+    } else {        
+        console.log('Canceled.'); 
+        digitId = "";
+        empName = "";
+        digitExt = "";
+        empEmail = "";
+        empDept = "";       
     };
 };
 
-// Listenners
+// Event Listenner
 employeeForm.addEventListener('load', helper);
 btn.addEventListener('click', saveEmployee, false);
